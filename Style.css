@@ -1,0 +1,196 @@
+.navbar {
+  z-index: 1;
+  
+}
+
+.navbar-brand{
+  color: white !important;
+  text-shadow: 1px 1px 3px rgba(5, 8, 22, 0.5);
+}
+
+.nav-link{
+  color: white !important;
+  text-shadow: 1px 1px 3px rgba(5, 8, 22, 0.5);
+}
+
+.jumbotron {
+  background-image: url("Images/81977302_p4_master1200.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.jumbotron img {
+  border-radius: 50%;
+  border: 5px solid whitesmoke;
+  width: 250px;
+}
+
+.row hr {
+  width: 500px;
+  border: 3px solid rgb(51, 50, 48);
+}
+
+.about .pKiri {
+  position: relative;
+  left: -70px;
+  opacity: 0;
+  transition: 1s;
+}
+
+.about .pKanan {
+  position: relative;
+  right: -70px;
+  opacity: 0;
+  transition: 1s;
+}
+
+.about .pKanan.munculTeks {
+  opacity: 1;
+  right: 0px;
+}
+
+.about .pKiri.munculTeks {
+  opacity: 1;
+  left: 0px;
+
+}
+
+.portofolio {
+  background-color: #eee;
+}
+
+.portofolio img {
+  margin-top: 10px;
+}
+
+.portofolio .img-thumbnail {
+  opacity: 0;
+  transition: 2s;
+  transform: translate(0, -40px);
+}
+
+.portofolio .img-thumbnail.muncul {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+span {
+  position: absolute;
+  top: 10px;
+  left: 60px;
+  width: 260px;
+  height: 260;
+  line-height: 260px;
+  background-color: rgba(7, 5, 5, 0);
+  color: whitesmoke;
+  text-shadow: 0 0 5px rgb(248, 49, 248);
+  opacity: 0;
+  transform: scale(0);
+  transition: ease-in-out 0.3s;
+  font-size: 24px;
+}
+
+a:hover span {
+  opacity: 1;
+  transform: scale(1);
+}
+
+a:hover img{
+  transform: scale(1.1) !important;
+}
+
+section {
+  min-height: 600px;
+  margin-top: 10px;
+}
+
+footer {
+  background-color: rgb(32, 31, 30);
+  min-height: 100px;
+  color: whitesmoke;
+  margin-top: 20px;
+}
+
+.navbar .navbar-toggler {
+  background-color: white;
+}
+
+.overlay {
+  width: 0;
+  height: 0;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  text-align: center;
+  z-index: 9999;
+  padding: 100px 0;
+  transition: 0.8s ease-in-out;
+}
+
+.overlay:target {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: auto;
+  height: auto;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  left: 0;
+}
+
+.overlay img {
+  width: 300px;
+  height: 300px;
+  box-shadow: 3px 2px 7px rgba(0, 0, 0, 0.5);
+  margin-top: 30px;
+}
+
+.overlay:target img {
+  animation: zoomDanFade 0.8s;
+}
+
+.overlay .close {
+  text-align: center;
+  margin: 10px auto;
+  position: absolute;
+  top: 70px;
+  left: auto;
+  margin-left: 95px;
+  color: white;
+  background-color: rgb(19, 17, 17);
+  border: 1px solid white;
+  /* line-height: 20px; */
+  opacity: 0;
+  min-width: 100px;
+  height: 30px
+}
+
+.overlay:target .close {
+  animation: slideDownFade 0.5s 0.5s forwards;
+}
+
+/* animasi */
+
+@keyframes zoomDanFade {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDownFade {
+  0% {
+    margin-top: -20px;
+    opacity: 0;
+  }
+
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
